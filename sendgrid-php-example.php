@@ -9,7 +9,7 @@ $tos               = explode(',', $_ENV['TOS']);
 
 $sendgrid = new SendGrid($sendgrid_username, $sendgrid_password, array("turn_off_ssl_verification" => true));
 $email    = new SendGrid\Email();
-$email->setTos($tos)->
+$email->setSmtpapiTos($tos)->
        setFrom($from)->
        setFromName("送信者名")->
        setSubject("[sendgrid-php-example] フクロウのお名前は%fullname%さん")->
