@@ -2,6 +2,7 @@
 require 'vendor/autoload.php';
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
+
 $api_key           = $_ENV['API_KEY'];
 $from              = $_ENV['FROM'];
 $tos               = explode(',', $_ENV['TOS']);
