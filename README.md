@@ -7,7 +7,7 @@
 ```bash
 git clone http://github.com/sendgridjp/sendgridjp-php-example.git
 cd sendgridjp-php-example
-cp .env.example .env 
+cp .env.example .env
 # .envファイルを編集してください
 composer install
 php -f sendgrid-php-example.php
@@ -17,14 +17,10 @@ php -f sendgrid-php-example.php
 .envファイルは以下のような内容になっています。
 
 ```bash
-SENDGRID_USERNAME=your_username
-SENDGRID_PASSWORD=your_password
+API_KEY=api_key
 TOS=you@youremail.com,friend1@friendemail.com,friend2@friendemail.com
 FROM=you@youremail.com
 ```
-SENDGRID_USERNAME:SendGridのユーザ名を指定してください。  
-SENDGRID_PASSWORD:SendGridのパスワードを指定してください。  
+API_KEY:SendGridの[API Key](https://sendgrid.kke.co.jp/docs/User_Manual_JP/Settings/api_keys.html)を指定してください。  
 TOS:宛先をカンマ区切りで指定してください。  
 FROM:送信元アドレスを指定してください。  
-
-
