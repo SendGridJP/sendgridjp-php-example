@@ -1,13 +1,13 @@
 <?php
 require 'vendor/autoload.php';
-Dotenv::load(__DIR__);
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
 
-$sendgrid_username = $_ENV['SENDGRID_USERNAME'];
-$sendgrid_password = $_ENV['SENDGRID_PASSWORD'];
+$api_key           = $_ENV['API_KEY'];
 $from              = $_ENV['FROM'];
 $tos               = explode(',', $_ENV['TOS']);
 
-$sendgrid = new SendGrid($sendgrid_username, $sendgrid_password, array("turn_off_ssl_verification" => true));
+$sendgrid = new SendGrid($api_key, array("turn_off_ssl_verification" => true));
 $email    = new SendGrid\Email();
 $email->setSmtpapiTos($tos)->
        setFrom($from)->
