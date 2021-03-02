@@ -12,7 +12,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 $api_key      = $_ENV["API_KEY"];
 $from         = $_ENV["FROM"];
-$tos          = explode(",", $_ENV["TOS"]);
+$to           = explode(",", $_ENV["TOS"]);
 
 // リクエストパラメータの構築
 // 送信元
@@ -20,7 +20,7 @@ $from = new From($from, "送信者名");
 // 宛先
 $tos = [
     new To(
-        $tos[0],
+        $to[0],
         "田中 太郎",
         [
             "%fullname%" => "田中 太郎",
@@ -29,7 +29,7 @@ $tos = [
         ]
     ),
     new To(
-        $tos[1],
+        $to[1],
         "佐藤 次郎",
         [
             "%fullname%" => "佐藤 次郎",
@@ -38,7 +38,7 @@ $tos = [
         ]
     ),
     new To(
-        $tos[2],
+        $to[2],
         "鈴木 三郎",
         [
             "%fullname%" => "鈴木 三郎",
@@ -76,7 +76,7 @@ $data = base64_encode(file_get_contents("./gif.gif"));
 $email->addAttachment(
     $data,
     "image/gif",
-    "gif.gif",
+    "owl.gif",
     "attachment"
 );
 
