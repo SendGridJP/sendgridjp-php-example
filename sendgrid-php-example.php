@@ -57,7 +57,7 @@ $plainTextContent = new PlainTextContent(
 );
 // HTMLパート
 $htmlContent = new HtmlContent(
-    "<strong> %familyname% さんは何をしていますか？</strong><br />彼は%place%にいます。"
+    "<strong> %familyname% さんは何をしていますか？</strong><br>彼は%place%にいます。"
 );
 // Mailオブジェクト生成
 $email = new Mail(
