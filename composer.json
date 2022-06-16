@@ -1,13 +1,13 @@
 {
     "name": "sendgridjp/sendgrid-php-example",
     "description": "Example of using the SendGrid php library.",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "homepage": "https://github.com/SendGridJP/sendgridjp-php-example",
     "license": "MIT",
     "keywords": ["SendGrid", "sendgrid", "email", "send", "grid", "php"],
     "minimum-stability" : "dev",
     "require": {
-        "sendgrid/sendgrid": "~7",
-        "vlucas/phpdotenv": "~5.3.0"
+        "sendgrid/sendgrid": "8.0.0",
+        "vlucas/phpdotenv": "5.4.1"
     }
 }
